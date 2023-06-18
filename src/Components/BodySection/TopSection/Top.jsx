@@ -6,9 +6,13 @@ import './top.css'
 import {BiSearchAlt} from 'react-icons/bi'
 import {TbMessageCircle} from 'react-icons/tb'
 import {MdOutlineNotificationsNone} from 'react-icons/md'
+import {BsArrowRightShort, BsQuestionCircle} from 'react-icons/bs'
 
 //images
-import img from '../../../Assets/user.png'
+import img from '../../../Assets/imgs/user.png'
+import img2 from '../../../Assets/imgs/planta1.png'
+import video from '../../../Assets/videos/video1.mp4'
+
 
 const Top = () => {
   return (
@@ -39,13 +43,50 @@ const Top = () => {
           <h1>Create and sell extraordinary products</h1>
           <p>The world's fast growing industry today are natural made products!</p>
 
-          <div className="button flex">
+          <div className="buttons flex">
             <button className="btn">Explore</button>
             <button className='btn tranparent'>Top Sellers</button>
           </div>
 
           <div className="videoDiv">
-            <video src="" autoPlay></video>
+            <video src={video} autoPlay loop></video>
+          </div>
+        </div>
+
+        <div className="leftCard flex">
+          <div className="main flex">
+            <div className="textDiv">
+              <h1>My Stat</h1>
+
+              <div className="flex">
+                <span>
+                  Today <br/> <small>4 Orders</small>
+                </span>
+                <span>
+                  This Month <br/> <small>12 Orders</small>
+                </span>
+              </div>
+              
+              <span className='flex link'>
+                Goto my orders <BsArrowRightShort className='icon'/>
+              </span>
+
+            </div>
+
+            <div className="imgDiv">
+              <img src={img2} alt="" />
+            </div>
+
+            {/* <div className="sideBarCard">
+              <BsQuestionCircle className='icon'/>
+              <div className="cardContent">
+                <div className="circle1"></div>
+                <div className="circle2"></div>
+                <h3>Help Center</h3>
+                <p>Having trouble in Planti, please contact us from for more questions.</p>
+                <button className='btn'>Go to help center</button>
+              </div>
+            </div> */}
           </div>
         </div>
       </div>
